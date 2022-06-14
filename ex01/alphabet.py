@@ -29,7 +29,7 @@ def shutudai():
 
 def kaitou(seikai):
     num = int(input("欠損文字はいくつあるでしょうか？："))
-    if num == NUM_OF_ABS_CHARS:
+    if num!= NUM_OF_ABS_CHARS:
         print("不正解です")
         return 0
     else:
