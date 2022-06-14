@@ -1,13 +1,13 @@
 import random
 import datetime
 
-NNUM_OF_TRIALS = 5     
+NUM_OF_TRIALS = 5     
 NUM_OF_ALL_CHARS = 10  
 NUM_OF_ABS_CHARS = 2   
 
 def main():
     st = datetime.datetime.now()  
-    for _ in range(NNUM_OF_TRIALS):
+    for _ in range(NUM_OF_TRIALS):
         seikai = shutudai()
         f = kaitou(seikai)
         if f == 1:
