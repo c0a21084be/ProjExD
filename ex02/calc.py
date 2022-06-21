@@ -74,6 +74,30 @@ if __name__ == "__main__":
         button.bind("<1>", button_click)
         
         if num == "=":
-           button["bg"] = "PaleVioletRed1"
-
+           button["bg"] = "#f582ae"
+        if num == "-":
+           button["bg"] = "#bae8e8"
+        if num == "*":
+           button["bg"] = "#bae8e8"
+        if num == "/":
+           button["bg"] = "#bae8e8"
+        if num == "+/-":
+           button["bg"] = "#e3f6f5"
+        if num == "%":
+           button["bg"] = "#e3f6f5"
+        if num == "+":
+           button["bg"] = "#bae8e8"
+        if num == "Del":
+           button["bg"] = "#e3f6f5"
+        if num == "X^2":
+           button["bg"] = "#e3f6f5"
+        if num == "sqrt(x)":
+           button["bg"] = "#e3f6f5"
+        if num == ".":
+           button["bg"] = "#ffd803"
+        if num == "C":
+           button["bg"] = "#e3f6f5"
+        if num == "1/x":
+           button["bg"] = "#e3f6f5"
+           
     root.mainloop()
