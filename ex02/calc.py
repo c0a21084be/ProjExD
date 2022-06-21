@@ -59,7 +59,7 @@ if __name__ == "__main__":
     entry.grid(row = 0, column= 0, columnspan=4)
 
     r, c = 40, 0
-    for i,num in enumerate(["Del","%","C","Del","1/x","X^2","sqrt(x)","/",7,8,9,"*",4,5,6,"-",1,2,3,"+","+/-",0,",","="]):
+    for i,num in enumerate(["Del","%","C","Del","1/x","X^2","sqrt(x)","/",7,8,9,"*",4,5,6,"-",1,2,3,"+","+/-",0,".","="]):
         button = tk.Button(root,
                     width= 5, 
                     height=2, 
@@ -94,7 +94,7 @@ if __name__ == "__main__":
         if num == "sqrt(x)":
            button["bg"] = "#e3f6f5"
         if num == ".":
-           button["bg"] = "#ffd803"
+           button["bg"] = "#e3f6f5"
         if num == "C":
            button["bg"] = "#e3f6f5"
         if num == "1/x":
