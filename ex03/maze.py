@@ -1,10 +1,6 @@
-from operator import is_
-from sre_constants import SUCCESS
-from textwrap import fill
 import tkinter as tk
 import tkinter.messagebox as tkm
 import random
-from turtle import color
 
 def make_maze(yoko, tate):
     XP = [ 0, 1, 0, -1]
