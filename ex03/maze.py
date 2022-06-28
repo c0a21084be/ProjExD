@@ -1,7 +1,10 @@
 import tkinter as tk
 import tkinter.messagebox as ttk
 
-
+def key_down(event):
+    global key
+    key = event.keysym
+    print(f"{key}Clicked")
 if __name__ ==  '__main__':
     root = tk.Tk()
     root.title("迷宫")
@@ -16,4 +19,7 @@ if __name__ ==  '__main__':
     cy = 400
     canvas.create_image(cx, cy, image=tori, tag="tori")
     
+    key=" "
+    root.bind("<KeyPress>",key_down)
+
     root.mainloop()
