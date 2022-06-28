@@ -1,5 +1,8 @@
+import imp
 import tkinter as tk
 import tkinter.messagebox as ttk
+import maze_maker as mm
+
 
 def key_down(event):
     global key
@@ -32,6 +35,10 @@ if __name__ ==  '__main__':
                        bg = "black",
                        )
     canvas.pack()
+
+    maze_bg = mm.make_maze(15,9) 
+    print(maze_bg)
+    mm.show_maze(canvas, maze_bg)
     tori = tk.PhotoImage(file="fig/5.png")
     cx = 300
     cy = 400
