@@ -49,6 +49,9 @@ def key_down(event):
         canvas.create_image(cx, cy, image= tori, tag= "tori")
         if num > 9:
             num = 0
+        if key == "k":
+            cx = 1350
+            cy = 750
 
 def key_up(event):
     global key
@@ -99,10 +102,8 @@ if __name__ ==  '__main__':
     show_maze(canvas, maze_bg)
     tori = tk.PhotoImage(file=f"fig/{str(num)}.png")
     
-    mx = 1
-    my = 1
-    cx = mx*100+50
-    cy = my*100+50
+    mx,my= 1,1
+    cx,cy = mx*100+50,my*100+50
 
     canvas.create_rectangle(cx+50,cy+50,cx-50,cy-50, fill="Green")
     kya = canvas.create_image(cx, cy, image=tori, tag="tori")
