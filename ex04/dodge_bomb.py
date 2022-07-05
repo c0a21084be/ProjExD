@@ -44,7 +44,7 @@ def main():
         if key_states[pg.K_RIGHT] == True: kkimg_rct.centerx += 1
         screen_sfc.blit(kkimg_sfc, kkimg_rct)
 
-        
+        bmimg_rct.move_ip(vx,vy)
         screen_sfc.blit(bmimg_sfc, bmimg_rct)
 
         pg.display.update()
