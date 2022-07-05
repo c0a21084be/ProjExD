@@ -1,7 +1,5 @@
 from distutils.util import split_quoted
 import random
-import re
-from this import s
 import pygame as pg
 import sys
 import math
