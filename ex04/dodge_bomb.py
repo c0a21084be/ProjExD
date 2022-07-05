@@ -85,8 +85,7 @@ def main():
             kkimg_sfc = pg.image.load("fig/6.png")
             kkimg_sfc = pg.transform.rotozoom(kkimg_sfc, 0, 2.0)
 
-        # if kkimg_rct.colliderect(bmimg_rct) and key_states[pg.K_SPACE] != True:
-        #     return
+        
         bmimg_rct_1.move_ip(vx1,vy1)      
         screen_sfc.blit(bmimg_sfc_1, bmimg_rct_1)
 
