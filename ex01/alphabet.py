@@ -13,7 +13,7 @@ def main():
         if f == 1:
             break
     ed = datetime.datetime.now()
-    print(f"{(ed+st).seconds}秒かかりました")
+    print(f"{(ed-st).seconds}秒かかりました")
 
 def shutudai():
     all_char_lst = random.sample([chr(c+65) for c in range(26)],NUM_OF_ALL_CHARS)
@@ -29,7 +29,7 @@ def shutudai():
 
 def kaitou(seikai):
     num = int(input("欠損文字はいくつあるでしょうか？："))
-    if num!= NUM_OF_ABS_CHARS:
+    if num != NUM_OF_ABS_CHARS:
         print("不正解です")
         return 0
     else:

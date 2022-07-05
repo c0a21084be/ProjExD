@@ -1,9 +1,9 @@
 import random
 def main():
-    seikai = seikai()
+    seikai = shutudai()
     kaitou(seikai)
 
-def seikai():
+def shutudai():
     qas = [{"q":"サザエさんの旦那の名前は","a":["マスオ","ますお"]},
             {"q":"カツオの妹の名前は","a":["ワカメ","わかめ"]},
             {"q":"タラオはカツオから見てどんな関係？","a":["甥","おい","甥っ子","おいっこ"]},
