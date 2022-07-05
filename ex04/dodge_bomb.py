@@ -29,23 +29,7 @@ def main():
     bmimg_rct_1.centery = random.randint(0, screen_rct.height)
     vx1, vy1 = +1, +1
 
-    # bmimg_sfc_2 = pg.Surface((20,20))
-    # bmimg_sfc_2.set_colorkey((0,0,0))
-    # pg.draw.circle(bmimg_sfc_2,(255,0,0), (10,10), 10)
-    # bmimg_rct_2 = bmimg_sfc_2.get_rect()
-    # bmimg_rct_2.centerx = random.randint(0, screen_rct.width)
-    # bmimg_rct_2.centery = random.randint(0, screen_rct.height)
-    # vx2, vy2 = +2, +2
-
-
-    # bmimg_sfc_3 = pg.Surface((20,20))
-    # bmimg_sfc_3.set_colorkey((0,0,0))
-    # pg.draw.circle(bmimg_sfc_3,(255,0,0), (10,10), 10)
-    # bmimg_rct_3 = bmimg_sfc_3.get_rect()
-    # bmimg_rct_3.centerx = random.randint(0, screen_rct.width)
-    # bmimg_rct_3.centery = random.randint(0, screen_rct.height)
-    # vx3, vy3 = *math.pi, *math.pi
-
+    
     
     while True:
         screen_sfc.blit(bgimg_sfc, bgimg_rct)
@@ -70,24 +54,14 @@ def main():
         bmimg_rct_1.move_ip(vx1,vy1)      
         screen_sfc.blit(bmimg_sfc_1, bmimg_rct_1)
 
-        # bmimg_rct_2.move_ip(vx2,vy2)
-        # screen_sfc.blit(bmimg_sfc_2, bmimg_rct_2)
-
-        # bmimg_rct_3.move_ip(vx3,vy3)
-        # screen_sfc.blit(bmimg_sfc_3, bmimg_rct_3)
+       
        
         #p7
         w, h = c_b(bmimg_rct_1, screen_rct)
         vx1 *= w
         vy1 *= h
        
-        # w, h = c_b(bmimg_rct_2, screen_rct)
-        # vx2 *= w
-        # vy2 *= h
-       
-        # w, h = c_b(bmimg_rct_3, screen_rct) 
-        # vx3 *= w
-        # vy3 *= h       
+             
         
         #p8
         if kkimg_rct.colliderect(bmimg_rct_1):
