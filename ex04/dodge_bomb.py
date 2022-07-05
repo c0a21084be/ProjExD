@@ -1,4 +1,3 @@
-from distutils.util import split_quoted
 import random
 import pygame as pg
 import sys
