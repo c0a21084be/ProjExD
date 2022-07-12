@@ -30,8 +30,10 @@ class Bird:
 
     def update(self, scr: Screen):
         key_states = pg.key.get_pressed() # 辞書
-        if key_states[pg.K_LSHIFT]       == True: Bird.s = 2.5
-        else: Bird.s = 1
+        if key_states[pg.K_LSHIFT]== True:
+             Bird.s = 2.5
+        else: 
+            Bird.s = 1
         if key_states[pg.K_UP]: 
             self.rct.centery -= Bird.s
         if key_states[pg.K_DOWN]: 
