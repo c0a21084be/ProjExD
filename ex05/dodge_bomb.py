@@ -18,7 +18,9 @@ class Screen:
 class Bird:
     s = 0
     def __init__(self, image: str, size: float, xy):
-        self.sfc = pg.image.load(image)    # Surface
+        self.sfc = pg.image.load(image)
+        self.sfc = pg.music.load("fig/house_lo.mp3")
+        self.sfc = pg.music.play(100)    # Surface
         self.sfc = pg.transform.rotozoom(self.sfc, 0, size)  # Surface
         self.rct = self.sfc.get_rect()          # Rect
         self.rct.center = xy
