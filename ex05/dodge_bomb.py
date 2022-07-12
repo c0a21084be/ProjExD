@@ -4,6 +4,15 @@ import sys
 import math
 import tkinter.messagebox as tkm
 
+class bird():
+  def __init__(self):
+    self.running = True
+    self.score = 0
+    self.speed = 0
+    self.shoot_down = False
+    self.last_move = None
+    self.current_player = None
+
 def main():
 
     clock= pg.time.Clock()
