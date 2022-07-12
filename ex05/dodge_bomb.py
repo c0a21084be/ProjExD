@@ -78,7 +78,6 @@ class Bomb:
         self.blit(scr)          
 
 class Shot:
-
     def __init__(self, chr: Bird):
         self.sfc = pg.image.load("fig/beam.png")
         self.sfc = pg.transform.rotozoom(self.sfc, 0, 0.25)  # Surface
@@ -136,7 +135,8 @@ class goal:
         self.vx *= yoko
         self.vy *= tate   
         # 練習5
-        self.blit(scr)          
+        self.blit(scr) 
+                 
 class Explosion:
     def __init__(self, image: str, size: float, xy):
         self.sfc = pg.image.load(image)    # Surface
