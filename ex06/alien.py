@@ -8,7 +8,7 @@ class Alien(Sprite):                    #敵を作る
         super().__init__()
         self.screen = ai_game.screen
         self.settings = ai_game.settings
-        self.image = pygame.image.load("fig/alien1.gif")                    #エイリアンの画像
+        self.image = pygame.image.load("fig/w2.png")                    #エイリアンの画像
         self.rect = self.image.get_rect()
         
         self.rect.x = self.rect.width                   #各エイリアンは最初は画面の左上
@@ -24,4 +24,3 @@ class Alien(Sprite):                    #敵を作る
         screen_rect = self.screen.get_rect()
         if self.rect.right >= screen_rect.right or self.rect.left <= 0:
             return True
-
