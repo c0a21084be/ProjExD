@@ -62,7 +62,7 @@ class Scoreboard:       # 得点を表す
         self.level_rect.right = self.screen_rect.right
         self.level_rect.top = self.score_rect.bottom + 10
 
-    def prep_ships(self):               # 残りの船の数を表示
+    def prep_ships(self):               # 残りの敵の数を表示
         self.ships = Group()
         for ship_number in range(self.stats.ships_left):
             ship = Ship(self.ai_game)
