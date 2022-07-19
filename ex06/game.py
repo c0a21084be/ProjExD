@@ -12,13 +12,12 @@ from scoreboard import Scoreboard
 
 
 class AlienInvasion:
-
     def __init__(self):
         pygame.init()
         self.settings = Settings()
         self.screen = pygame.display.set_mode(
             (self.settings.screen_width, self.settings.screen_height))
-        pygame.display.set_caption("wzy first game")
+        pygame.display.set_caption("打って！こうかとん")
 
         #ゲームの統計を保存するインスタンスを作成する
         #スコアボードを作成します
@@ -142,7 +141,7 @@ class AlienInvasion:
             self.ship.center_ship()
 
     def _check_keydown_events(self, event):
-        """响应按键"""
+        # 応答ボタン
         if event.key == pygame.K_RIGHT:
             self.ship.moving_right = True
         elif event.key == pygame.K_LEFT:
@@ -152,40 +151,37 @@ class AlienInvasion:
         elif event.key == pygame.K_SPACE:
             self._fire_bullet()
 
-    def _check_keyup_events(self, event):
-        """响应松开"""
+    def _check_keyup_events(self, event):  
         if event.key == pygame.K_RIGHT:
             self.ship.moving_right = False
         elif event.key == pygame.K_LEFT:
             self.ship.moving_left = False
 
     def _fire_bullet(self):
-        """创建一颗子弹，并将其加入编组bullets中。"""
         if len(self.bullets) < self.settings.bullets_allowed:
             new_bullet = Bullet(self)
             self.bullets.add(new_bullet)
 
-    def _create_fleet(self):
-        """创建外星人群"""
-        # 创建一个外星人并计算一行可容纳多少个外星人
-        # 外星人的间距为外星人宽度
+    def _create_fleet(self):    # tekiの人口を作成する
+        # tekiを作成し、何人のtekiが一列に収まるかを数えます
+        # tekiの間隔はtekiの幅です
         alien = Alien(self)
         alien_width, alien_height = alien.rect.size
         available_space_x = self.settings.screen_width - (2*alien_width)
         number_alien_x = available_space_x//(2*alien_width)
 
-        # 计算屏幕可容纳多少行外星人
+        # 画面が保持できるtekiの行数を計算します
         ship_height = self.ship.rect.height
         available_space_y = (self.settings.screen_height -
                              (3*alien_height) - ship_height)
         number_rows = available_space_y//(2*alien_height)
 
-        # 创建外星人群
+        # tekiの群集を作成する
         for row_number in range(number_rows):
             for alien_number in range(number_alien_x):
                 self._creat_alien(alien_number, row_number)
 
-    def _check_fleet_edges(self):               # 敵が端に達したときに行動を起こす
+    def _check_fleet_edges(self):               # 
         for alien in self.aliens.sprites():
             if alien.check_edges():
                 self._change_fleet_direction()
