@@ -20,6 +20,9 @@ class AlienInvasion:
         self.screen = pygame.display.set_mode(
             (self.settings.screen_width, self.settings.screen_height))
         pygame.display.set_caption("打って！こうかとん")
+        mixer.init()
+        mixer.music.load("BGM.mp3")
+        mixer.music.play(1)
 
         #ゲームの統計を保存するインスタンスを作成する
         #スコアボードを作成します
@@ -124,6 +127,10 @@ class AlienInvasion:
     def _check_play_button(self, mouse_pos):
         #プレーヤーが再生ボタンをクリックすると新しいゲームを開始します
         button_clicked = self.play_button.rect.collidepoint(mouse_pos)
+        mixer.init()
+        mixer.music.load("BGM.mp3")
+        mixer.music.play(1)
+
         if button_clicked and not self.stats.game_active:
             # ゲーム設定をリセット
             self.settings.initialize_dynamic_settings()
