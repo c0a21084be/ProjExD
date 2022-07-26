@@ -21,7 +21,7 @@ class AlienInvasion:
             (self.settings.screen_width, self.settings.screen_height))
         pygame.display.set_caption("打って！こうかとん")
         mixer.init()
-        mixer.music.load("BGM.mp3")
+        mixer.music.load("fig/BGM.mp3")
         mixer.music.play(1)
 
         #ゲームの統計を保存するインスタンスを作成する
@@ -128,7 +128,7 @@ class AlienInvasion:
         #プレーヤーが再生ボタンをクリックすると新しいゲームを開始します
         button_clicked = self.play_button.rect.collidepoint(mouse_pos)
         mixer.init()
-        mixer.music.load("BGM.mp3")
+        mixer.music.load("fig/BGM.mp3")
         mixer.music.play(1)
 
         if button_clicked and not self.stats.game_active:
@@ -161,7 +161,7 @@ class AlienInvasion:
             self._fire_bullet()
             #C0A21078
             mixer.init()
-            mixer.music.load("発砲音.mp3")
+            mixer.music.load("fig/発砲音.mp3")
             mixer.music.play(1)
 
     def _check_keyup_events(self, event):  
