@@ -1,5 +1,6 @@
 import sys
 from time import sleep
+from turtle import color
 import pygame
 from pygame.constants import  MOUSEBUTTONDOWN
 from settings import Settings
@@ -19,6 +20,10 @@ class Play:
         self.settings = Settings()
         self.screen = pygame.display.set_mode(
             (self.settings.screen_width, self.settings.screen_height))
+        #self.screen = pygame.image.load('pg_bg.jpg')
+        color = (153,255,102)
+        self.screen.fill(color)
+        pygame.display.flip()
         pygame.display.set_caption("打って！こうかとん")
         
 
@@ -39,7 +44,7 @@ class Play:
         # start the game
         while True:
             self._check_events()
-
+        #画像更新
             if self.stats.game_active:
                 self._update_screen()
                 self.ship.update()
