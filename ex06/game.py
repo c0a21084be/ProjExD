@@ -9,7 +9,9 @@ from ship import Ship
 from bullet import Bullet
 from alien import Alien
 from button import Button
-from scoreboard import Scoreboard
+from scoreboard import Scoreboard  
+#C0A21078
+from pygame import mixer
 
 
 class AlienInvasion:
@@ -23,6 +25,9 @@ class AlienInvasion:
         self.screen.fill(color)
         pygame.display.flip()
         pygame.display.set_caption("打って！こうかとん")
+        mixer.init()
+        mixer.music.load("fig/BGM.mp3")
+        mixer.music.play(1)
 
         #ゲームの統計を保存するインスタンスを作成する
         #スコアボードを作成します
@@ -127,6 +132,10 @@ class AlienInvasion:
     def _check_play_button(self, mouse_pos):
         #プレーヤーが再生ボタンをクリックすると新しいゲームを開始します
         button_clicked = self.play_button.rect.collidepoint(mouse_pos)
+        mixer.init()
+        mixer.music.load("fig/BGM.mp3")
+        mixer.music.play(1)
+
         if button_clicked and not self.stats.game_active:
             # ゲーム設定をリセット
             self.settings.initialize_dynamic_settings()
@@ -155,6 +164,10 @@ class AlienInvasion:
             sys.exit()
         elif event.key == pygame.K_SPACE:
             self._fire_bullet()
+            #C0A21078
+            mixer.init()
+            mixer.music.load("fig/発砲音.mp3")
+            mixer.music.play(1)
 
     def _check_keyup_events(self, event):  
         if event.key == pygame.K_RIGHT:
