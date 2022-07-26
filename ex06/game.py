@@ -8,7 +8,9 @@ from ship import Ship
 from bullet import Bullet
 from alien import Alien
 from button import Button
-from scoreboard import Scoreboard
+from scoreboard import Scoreboard  
+#C0A21078
+from pygame import mixer
 
 
 class AlienInvasion:
@@ -150,6 +152,10 @@ class AlienInvasion:
             sys.exit()
         elif event.key == pygame.K_SPACE:
             self._fire_bullet()
+            #C0A21078
+            mixer.init()
+            mixer.music.load("発砲音.mp3")
+            mixer.music.play(1)
 
     def _check_keyup_events(self, event):  
         if event.key == pygame.K_RIGHT:
