@@ -13,16 +13,14 @@ from scoreboard import Scoreboard
 from pygame import mixer
 
 
-class Invasion:
+class Play:
     def __init__(self):
         pygame.init()
         self.settings = Settings()
         self.screen = pygame.display.set_mode(
             (self.settings.screen_width, self.settings.screen_height))
         pygame.display.set_caption("打って！こうかとん")
-        mixer.init()
-        mixer.music.load("fig/BGM.mp3")
-        mixer.music.play(100)
+        
 
         #ゲームの統計を保存するインスタンスを作成する
         #スコアボードを作成します
@@ -80,7 +78,7 @@ class Invasion:
             self.sb.prep_level()
 
     def _ship_hit(self):
-        #宇宙船がエイリアンに襲われたときの反応
+        #襲われたときの反応
         if self.stats.ships_left > 0:
             # ships_left-1
             self.stats.ships_left -= 1
@@ -129,8 +127,7 @@ class Invasion:
         button_clicked = self.play_button.rect.collidepoint(mouse_pos)
         mixer.init()
         mixer.music.load("fig/BGM.mp3")
-        mixer.music.play(1)
-
+        #mixer.music.play(1)
         if button_clicked and not self.stats.game_active:
             # ゲーム設定をリセット
             self.settings.initialize_dynamic_settings()
@@ -238,5 +235,8 @@ class Invasion:
 
 
 if __name__ == '__main__':              #ゲームインスタンスを作成してゲームを実行します。
-    ai = Invasion()
-    ai.run_game()
+    mixer.init()
+    mixer.music.load("fig/BGM.mp3")
+    mixer.music.play()
+    game = Play()
+    game.run_game()
