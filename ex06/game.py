@@ -15,8 +15,10 @@ class AlienInvasion:
     def __init__(self):
         pygame.init()
         self.settings = Settings()
-        self.screen = pygame.display.set_mode(
-            (self.settings.screen_width, self.settings.screen_height))
+        # self.screen = pygame.display.set_mode(
+        #     (self.settings.screen_width, self.settings.screen_height))
+        self.screen = pygame.image.load('pg_bg.jpg')
+
         pygame.display.set_caption("打って！こうかとん")
 
         #ゲームの統計を保存するインスタンスを作成する
