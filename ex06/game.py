@@ -236,7 +236,7 @@ class Play:
 
 if __name__ == '__main__':              #ゲームインスタンスを作成してゲームを実行します。
     mixer.init()
-    mixer.music.load("fig/BGM.mp3")
+    mixer.music.load("fig/BGM.mp3")     #C0A21078
     mixer.music.play()
     game = Play()
     game.run_game()
