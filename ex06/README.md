@@ -24,8 +24,13 @@
 - class Button  スタートのボタンを作る
 - class Game_states 変数を初期化
 - class Scoreboard  得点を作る
+            
 - class Ship    こうかとんがを作る
 - class AlienInvasion   gameを初期化して、実行する
+
+- C0A21078(追加)
+- 発砲音を追加 SHIFTを押したときの音  
+- BGMの追加　ゲーム開始時野ＢＧＭ　　 
 ### 参考
 - https://sourceexample.com/article/jp/1a97957135d173a2eb1eec32a
 - https://pygame-zero.readthedocs.io/ja/latest/builtins.html
@@ -36,6 +41,3 @@
 - https://blog.csdn.net/XiuBi_251/article/details/124389095?ops_request_misc=&request_id=&biz_id=102&utm_term=python%E5%B0%8F%E6%B8%B8%E6%88%8F%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-1-124389095.142^v32^new_blog_fixed_pos,185^v2^control&spm=1018.2226.3001.4187
 - https://blog.csdn.net/weixin_54556126/article/details/121679078
 
-### 追加
-- 発砲音を追加 SHIFTを押したときの音 C0A21078
-- BGMの追加　ゲーム開始時野ＢＧＭ　　C0A21078
