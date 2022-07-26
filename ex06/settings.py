@@ -1,4 +1,6 @@
 from time import sleep
+import pygame
+
 class Settings:
    
 
@@ -6,7 +8,8 @@ class Settings:
         # 画面設定
         self.screen_width = 1200
         self.screen_height = 800
-        self.bg_color = (230, 230, 230)
+        #self.screen = pygame.image.load('pg_bg.jpg')
+        self.bg_color = (152, 255, 152)
         # kokatonセットアップ
         self.ship_speed = 1.5
         self.ship_limit = 3
