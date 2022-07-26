@@ -13,7 +13,7 @@ from scoreboard import Scoreboard
 from pygame import mixer
 
 
-class AlienInvasion:
+class Invasion:
     def __init__(self):
         pygame.init()
         self.settings = Settings()
@@ -22,7 +22,7 @@ class AlienInvasion:
         pygame.display.set_caption("打って！こうかとん")
         mixer.init()
         mixer.music.load("fig/BGM.mp3")
-        mixer.music.play(1)
+        mixer.music.play(100)
 
         #ゲームの統計を保存するインスタンスを作成する
         #スコアボードを作成します
@@ -238,6 +238,5 @@ class AlienInvasion:
 
 
 if __name__ == '__main__':              #ゲームインスタンスを作成してゲームを実行します。
-    ai = AlienInvasion()
+    ai = Invasion()
     ai.run_game()
-
