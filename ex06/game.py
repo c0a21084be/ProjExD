@@ -41,7 +41,7 @@ class AlienInvasion:
         # start the game
         while True:
             self._check_events()
-
+        #画像更新
             if self.stats.game_active:
                 self._update_screen()
                 self.ship.update()
