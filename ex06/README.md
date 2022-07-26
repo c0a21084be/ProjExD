@@ -22,15 +22,14 @@
 - class Alien   敵を作る
 - class Bullet  銃弾を作る
 - class Button  スタートのボタンを作る
-- class Game_states 変数を初期化
-- class Scoreboard  得点を作る
-            
+- class Game_states 変数を初期化 c0a21096
+- class Scoreboard  得点を作る　[画面の上部中央に最高のスコアを配置する C0A21066]
+                                [c0b21190 得点について最高点を追加　得点の表示と得点のバランスを改善]                
 - class Ship    こうかとんがを作る
 - class AlienInvasion   gameを初期化して、実行する
 
-- C0A21078(追加)
-- 発砲音を追加 SHIFTを押したときの音  
-- BGMの追加　ゲーム開始時野ＢＧＭ　　 
+- 発砲音を追加 SHIFTを押したときの音  C0A21078(追加)
+- BGMの追加　ゲーム開始時野ＢＧＭ　C0A21078(追加)　 
 ### 参考
 - https://sourceexample.com/article/jp/1a97957135d173a2eb1eec32a
 - https://pygame-zero.readthedocs.io/ja/latest/builtins.html
