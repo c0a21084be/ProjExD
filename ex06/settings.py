@@ -9,7 +9,7 @@ class Settings:
         self.screen_width = 1200
         self.screen_height = 800
         #self.screen = pygame.image.load('pg_bg.jpg')
-        self.bg_color = (153, 255, 102)
+        self.bg_color = (154, 255, 102)
         # kokatonセットアップ
         self.ship_speed = 1.5
         self.ship_limit = 3
